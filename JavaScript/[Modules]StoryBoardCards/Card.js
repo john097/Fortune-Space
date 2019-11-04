@@ -48,7 +48,7 @@ SkillCardContainter.setAttribute("class","SkillCardContainter");
 
 var SkillCardConttainerTitle = document.createElement("div");
 SkillCardConttainerTitle.setAttribute("class","titleBar");
-
+SkillCardConttainerTitle.innerHTML = '技能概括Skill随机组合可能性';
 SkillCardContainter.appendChild(SkillCardConttainerTitle);
 
 SkillCardContainterblock.appendChild(SkillCardContainter);
@@ -66,16 +66,16 @@ function CreateSkillCard(str,str2,str3,id){
     mycard.innerHTML = str;
     //
     var insideCard = document.createElement("div");
-    insideCard.innerHTML = str2;
+    insideCard.innerHTML = str3;
     insideCard.setAttribute("class", "SkillCardInside");
     //
     var titleBar = document.createElement("div");
     titleBar.setAttribute("class", "SkillCardTitleBar");
-    titleBar.innerHTML = str3;
+    titleBar.innerHTML = str2;
 
     mycardblock.appendChild(mycard);
-    mycardblock.appendChild(titleBar);
-    mycardblock.appendChild(insideCard);
+    mycard.appendChild(titleBar);
+    mycard.appendChild(insideCard);
     SkillCardContainter.appendChild(mycardblock);
     document.body.appendChild(SkillCardContainterblock);
 }
