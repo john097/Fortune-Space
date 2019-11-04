@@ -1,19 +1,19 @@
 
 //创建各个元素
-function createBanner(){
+function createBanner() {
     var banner = document.createElement("div");
     banner.setAttribute("class", 'banner');
     document.body.appendChild(banner);
 }
 //导航栏
-function createNavigationBar(){
+function createNavigationBar() {
 
     //故事板按钮
     var button = document.createElement("button");
     button.setAttribute("class", 'button button-primary button-rounded');
     button.setAttribute("id", 'button_storyboard');
     button.innerHTML = "故事板";
-    
+
     //世界观按钮
     var button_World = document.createElement("button");
     button_World.setAttribute("class", 'button button-primary button-rounded');
@@ -44,7 +44,7 @@ function createNavigationBar(){
 
     var block = document.createElement("div");
     block.setAttribute("class", 'Navigation_Block');
-    block.setAttribute('id','Navigation_Block');
+    block.setAttribute('id', 'Navigation_Block');
 
     //加入到hierarchy
     navbar.appendChild(button);
@@ -57,35 +57,55 @@ function createNavigationBar(){
     document.body.appendChild(block);
 }
 //脚部
-function createFootage(){
+function createFootage() {
 
     var footage = document.createElement("div");
     footage.setAttribute("class", 'footage');
-    
+
     var box = document.createElement("div");
-    box.innerHTML = "友情链接：www.zhbit.top \n 送给大家的话：\n团队Credit:\n";
+    box.innerHTML = "友情链接：www.zhbit.top <br/>送给大家的话:<br/>团队Credit:</br>";
 
     footage.appendChild(box);
     document.body.appendChild(footage);
-    
+
 }
 //隐藏故事板
-function DisappearStoryBoard(){
-    storyboard = document.getElementById("StoryBoard");
-    if (storyboard.style.display!="flex") {
-        storyboard.style.display="flex";
-    }else if(storyboard.style.display!="none"){
-        storyboard.style.display="none";
+function ClearBoard(id) {
+    id = id || "none";
+    board = document.getElementById(id);
+    if (board!=null) {
+        document.body.removeChild(board);
     }
     
 }
+
+
+//物品数据菜单列表
+function CreateItemContainter() {
+
+}
 //事件点击案例
-function IfNaviButtonClick(my_id,my_event){ 
+function IfNaviButtonClick(my_id, my_event) {
     this.button = document.getElementById(my_id);
-    this.button.onclick = function(){
+    this.button.onclick = function () {
         //事件名称
-        if (my_event==="DisappearStoryBoard") {
-            DisappearStoryBoard();
+        if (my_event === "StoryBoard") {
+            
+            //清除
+            ClearBoard("SkillCardContainter");
+            //创建
+            randomizeStoryText();
+        } else if (my_event === "World") {
+
+        } else if (my_event === "MapGenerator") {
+
+        } else if (my_event === "ItemData") {
+            //清除
+            ClearBoard("StoryBoard");
+            //创建
+            IntializeSkillCardBoard();
+        } else if (my_event === "More") {
+
         }
     }
 }

@@ -1,9 +1,7 @@
 body{
     background-color: #4d4d4d;
     animation : GradientAnimateBackgroundcol 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: initial;
+
     margin: 0%;
     
 }
@@ -39,13 +37,12 @@ body{
 .Navigation_Block{
     display:inline;
     margin: auto;
-    justify-content:center;
+    text-align: center;
 }
 .navbar{
     width: auto;
     margin: 20px;
     padding: 5px;
-    float: right;
     background-color: rgb(234, 245, 245);
     border-radius: 0px;
     box-shadow: rgba(26, 87, 230, 0.10);
@@ -57,10 +54,11 @@ body{
     margin:0;
     background-color: rgb(70, 70, 70);
 }
+/* 故事板的样式 */
 .container{
-    display:none;
-
+    display: flex;
     flex-wrap: wrap;
+    flex-grow: initial;
 
     margin: 20px;
     border-radius: 20px;
@@ -69,6 +67,19 @@ body{
     padding: 10px;
     background-color: rgb(245, 245, 245);
 }
+.SkillCardContainter{
+    display: flex;
+    flex-flow: column;
+    flex-grow: initial;
+
+    margin: 20px;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+}
+/* 卡片的样式 */
 .card{
 
     width:250px;
@@ -85,7 +96,24 @@ body{
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+/* 技能卡片样式 */
+.Skillcard{
 
+    display: inline;
+    margin:30px;
+    background-color:  rgb(251, 250, 245);
+    box-shadow:rgba(26, 87, 230, 0.10) 0px 0px 10px 10px ;
+    border-radius:15px;
+    padding: 10px;
+
+}
+.Skillcard:hover{
+    animation: ScaleLarge 0.2s ease-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/* 故事卡内衬样式 */
 .insideCard{
     padding: 10px;
     background-color: rgb(255, 255, 255);
@@ -93,7 +121,26 @@ body{
     color: rgb(139, 139, 139);
     border-radius:10px;
 }
+/* 技能卡内衬样式 */
+.SkillCardInside{
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow:rgba(26, 87, 230, 0.10) 0px 0px 10px 10px ;
+    color: rgb(139, 139, 139);
+    border-radius:10px;
+}
+/* 故事板标题样式 */
 .titleBar{
+    margin:10px;
+    padding: 5px;
+    text-align: center;
+    border-radius:15px;
+    box-shadow:rgba(26, 87, 230, 0.10) 0px 0px 10px 10px ;
+    border: solid goldenrod 1px;
+    background-color: white;
+}
+/* 技能卡标题样式 */
+.SkillCardTitleBar{
     margin:10px;
     padding: 5px;
     text-align: center;
