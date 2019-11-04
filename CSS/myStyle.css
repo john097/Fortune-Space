@@ -31,7 +31,7 @@ body{
     margin: 0;
     height: 200px;
     background-color:black;
-    background-image: url('Fortune-Space/Image/banner-backgroundimg.jpg');
+    background-image: url('../Image/banner-backgroundimg.jpg');
     background-repeat:no-repeat;
     background-position: center;
     background-size: auto 100%;
