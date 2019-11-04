@@ -1,4 +1,5 @@
 //创建故事板
+//
 var container = document.createElement("div");
 container.setAttribute("class","container");
 container.setAttribute("id","StoryBoard");
@@ -6,14 +7,14 @@ container.setAttribute("id","StoryBoard");
 function createCard(str, str2) {
     str = str || "none";
     str2 = str2 || "none";
-
+    //
     var mycard = document.createElement("div");
     mycard.setAttribute("class", 'card');
-
+    //
     var insideCard = document.createElement("div");
     insideCard.innerHTML = str;
     insideCard.setAttribute("class", "insideCard");
-
+    //
     var titleBar = document.createElement("div");
     titleBar.setAttribute("class", "titleBar");
     titleBar.innerHTML = str2;

@@ -31,7 +31,7 @@ body{
     margin: 0;
     height: 200px;
     background-color:black;
-    background-image: url('/Image/banner-backgroundimg.jpg');
+    background-image: url('Fortune-Space/Image/banner-backgroundimg.jpg');
     background-repeat:no-repeat;
     background-position: center;
     background-size: auto 100%;
@@ -42,15 +42,14 @@ body{
     justify-content:center;
 }
 .navbar{
-    width: 600px;
+    width: auto;
     height: 40px;
     margin: 20px;
     padding: 10px;
     float: right;
     background-color: rgb(234, 245, 245);
-    border-radius: 15px;
+    border-radius: 0px;
     box-shadow: rgba(26, 87, 230, 0.10);
-    
 }
 .footage{
     width: 100%;
@@ -60,8 +59,7 @@ body{
     background-color: rgb(70, 70, 70);
 }
 .container{
-    display:-webkit-flex;
-    display:flex;
+    display:none;
 
     flex-wrap: wrap;
 
@@ -69,7 +67,7 @@ body{
     border-radius: 20px;
     height: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     background-color: rgb(245, 245, 245);
 }
 .card{
@@ -104,4 +102,7 @@ body{
     box-shadow:rgba(26, 87, 230, 0.10) 0px 0px 10px 10px ;
     border: solid goldenrod 1px;
     background-color: white;
+}
+@media screen and (max-width:'1024px'){
+
 }
