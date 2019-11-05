@@ -93,8 +93,8 @@ function IfNaviButtonClick(my_id, my_event) {
             
             //清除
             ClearBoard("SkillCardContainter");
-            //创建
-            randomizeStoryText();
+            //显示
+            DisplayStoryBoard();
         } else if (my_event === "World") {
 
         } else if (my_event === "MapGenerator") {
@@ -103,7 +103,7 @@ function IfNaviButtonClick(my_id, my_event) {
             //清除
             ClearBoard("StoryBoard");
             //创建
-            IntializeSkillCardBoard();
+            DisplaySkillCardBoard();
         } else if (my_event === "More") {
 
         }

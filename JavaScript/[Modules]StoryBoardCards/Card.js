@@ -30,14 +30,17 @@ function createCard(str, str2) {
     document.body.appendChild(containerblock);
 }
 //随机生成故事卡
-function randomizeStoryText() {
+function CreateStoryBoard() {
     
     for (const iterator of story) {
         //if (Math.random() > 0.5);
         createCard(iterator.story, "ID:"+iterator.id+";"+iterator.title);
     }
-
 }
+function DisplayStoryBoard(){
+    document.body.appendChild(containerblock);
+}
+
 //技能卡
 //屏障
 var SkillCardContainterblock = document.createElement("div");
@@ -48,7 +51,8 @@ SkillCardContainter.setAttribute("class","SkillCardContainter");
 
 var SkillCardConttainerTitle = document.createElement("div");
 SkillCardConttainerTitle.setAttribute("class","titleBar");
-SkillCardConttainerTitle.innerHTML = '技能概括Skill随机组合可能性';
+SkillCardConttainerTitle.setAttribute("style","font-size: 24px");
+SkillCardConttainerTitle.innerHTML = '技能种类概括';
 SkillCardContainter.appendChild(SkillCardConttainerTitle);
 
 SkillCardContainterblock.appendChild(SkillCardContainter);
@@ -60,6 +64,7 @@ function CreateSkillCard(str,str2,str3,id){
     
     var mycardblock = document.createElement("div");
     mycardblock.setAttribute("id","skillcard_"+id);
+    mycardblock.setAttribute("class","SkillcardBlock");
     //
     var mycard = document.createElement("div");
     mycard.setAttribute("class", 'Skillcard');
@@ -74,8 +79,8 @@ function CreateSkillCard(str,str2,str3,id){
     titleBar.innerHTML = str2;
 
     mycardblock.appendChild(mycard);
-    mycard.appendChild(titleBar);
-    mycard.appendChild(insideCard);
+    mycardblock.appendChild(titleBar);
+    mycardblock.appendChild(insideCard);
     SkillCardContainter.appendChild(mycardblock);
     document.body.appendChild(SkillCardContainterblock);
 }
@@ -87,6 +92,9 @@ function IntializeSkillCardBoard() {
         CreateSkillCard(iterator.name, iterator.distance,iterator.discribe,Skill_db.indexOf(iterator));
     }
 
+}
+function DisplaySkillCardBoard(){
+    document.body.appendChild(SkillCardContainterblock);
 }
 //芯片卡
 function CreateCoreCard(){

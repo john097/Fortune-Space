@@ -2,10 +2,10 @@
 createBanner();
 createNavigationBar();
 
-//randomizeStoryText();
-//IntializeSkillCardBoard();
-
-
+CreateStoryBoard();
+IntializeSkillCardBoard();
+ClearBoard("SkillCardContainter");
+ClearBoard("StoryBoard");
 
 IfNaviButtonClick("button_storyboard","StoryBoard");
 IfNaviButtonClick("button_World","World");
