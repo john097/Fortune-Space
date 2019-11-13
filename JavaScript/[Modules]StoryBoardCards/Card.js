@@ -60,27 +60,28 @@ function CreateSkillCard(str,str2,str3,id){
     str = str || "none";
     str2 = str2 || "none";
     str3 = str3 || "none";
-    id = id || "skillcard_0";
+    id = id || "0";
     
-    var mycardblock = document.createElement("div");
-    mycardblock.setAttribute("id","skillcard_"+id);
-    mycardblock.setAttribute("class","SkillcardBlock");
+    this.mycardblock = document.createElement("div");
+    this.mycardblock.setAttribute("id","skillcard_"+id);
+    this.mycardblock.setAttribute("class","SkillcardBlock");
     //
-    var mycard = document.createElement("div");
-    mycard.setAttribute("class", 'Skillcard');
-    mycard.innerHTML = str;
+    this.mycard = document.createElement("div");
+    this.mycard.setAttribute("class", 'Skillcard');
+    this.mycard.innerHTML = str;
     //
-    var insideCard = document.createElement("div");
-    insideCard.innerHTML = str3;
-    insideCard.setAttribute("class", "SkillCardInside");
+    this.insideCard = document.createElement("div");
+    this.insideCard.innerHTML = str3;
+    this.insideCard.setAttribute("class", "SkillCardInside");
     //
-    var titleBar = document.createElement("div");
-    titleBar.setAttribute("class", "SkillCardTitleBar");
-    titleBar.innerHTML = str2;
+    this.titleBar = document.createElement("div");
+    this.titleBar.setAttribute("class", "SkillCardTitleBar");
+    this.titleBar.innerHTML = str2;
 
-    mycardblock.appendChild(mycard);
-    mycardblock.appendChild(titleBar);
-    mycardblock.appendChild(insideCard);
+    this.mycardblock.appendChild(mycard);
+    this.mycardblock.appendChild(titleBar);
+    this.mycardblock.appendChild(insideCard);
+
     SkillCardContainter.appendChild(mycardblock);
     document.body.appendChild(SkillCardContainterblock);
 }
@@ -97,25 +98,62 @@ function IntializeSkillCardBoard() {
 function DisplaySkillCardBoard(){
     document.body.appendChild(SkillCardContainterblock);
 }
+
+
 //芯片卡
 
 var CoreCardContanerBlock = document.createElement("div");
 CoreCardContanerBlock.setAttribute("id","CoreCardContainter");
 
-var CoreCardContaner = document.createElement("div");
-CoreCardContaner.setAttribute("class","CoreCardContainter");
+var CoreCardContainer = document.createElement("div");
+CoreCardContainer.setAttribute("class","CoreCardContainter");
 
 var CoreCardContanerTitle = document.createElement("div");
 CoreCardContanerTitle.setAttribute("class","titleBar");
 CoreCardContanerTitle.setAttribute("style","font-size: 24px");
 CoreCardContanerTitle.innerHTML = '芯片种类概括';
 
-CoreCardContaner.appendChild(CoreCardContanerTitle);
+CoreCardContainer.appendChild(CoreCardContanerTitle);
+CoreCardContanerBlock.appendChild(CoreCardContainer);
 //创建芯片卡
-function CreateCoreCard(){
+function CreateCoreCard(str,str2,str3,id){
+    str = str || "none";
+    str2 = str2 || "none";
+    str3 = str3 || "none";
+    id = id || "0";
     
+    this.mycardblock = document.createElement("div");
+    this.mycardblock.setAttribute("id","CoreCard_"+id);
+    this.mycardblock.setAttribute("class","SkillcardBlock");
+    //
+    this.mycard = document.createElement("div");
+    this.mycard.setAttribute("class", 'Skillcard');
+    this.mycard.innerHTML = str;
+    //
+    this.insideCard = document.createElement("div");
+    this.insideCard.innerHTML = str3;
+    this.insideCard.setAttribute("class", "SkillCardInside");
+    //
+    this.titleBar = document.createElement("div");
+    this.titleBar.setAttribute("class", "SkillCardTitleBar");
+    this.titleBar.innerHTML = str2;
+
+    this.mycardblock.appendChild(mycard);
+    this.mycardblock.appendChild(titleBar);
+    this.mycardblock.appendChild(insideCard);
+    CoreCardContainer.appendChild(mycardblock);
+    document.body.appendChild(CoreCardContanerBlock);
+}
+//生成技能卡
+function IntializeCoreCardBoard() {
+    
+    for (const iterator of CoreCard_db) {
+        //if (Math.random() > 0.5);
+        CreateCoreCard(iterator.name, iterator.mode ,iterator.effect,CoreCard_db.indexOf(iterator));
+    }
+
 }
 //显示芯片卡
 function DisplayCoreCardBoard(){
-    document.body.appendChild(CoreCardContainterblock);
+    document.body.appendChild(CoreCardContanerBlock);
 }

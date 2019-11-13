@@ -93,13 +93,19 @@ function IfNaviButtonClick(my_id, my_event) {
             
             //清除
             ClearBoard("SkillCardContainter");
+            ClearBoard("CoreCardContainter");
+
             ClearBoard("WorldViewBoard");
+
             //显示
             DisplayStoryBoard();
         } else if (my_event === "World") {
             //清除
             ClearBoard("StoryBoard");
+
             ClearBoard("SkillCardContainter");
+            ClearBoard("CoreCardContainter");
+
             //显示
             DisplayWorldViewBoard();
         } else if (my_event === "MapGenerator") {
@@ -107,9 +113,13 @@ function IfNaviButtonClick(my_id, my_event) {
         } else if (my_event === "ItemData") {
             //清除
             ClearBoard("StoryBoard");
+
             ClearBoard("WorldViewBoard");
+
+            
             //创建
             DisplaySkillCardBoard();
+            DisplayCoreCardBoard();
         } else if (my_event === "More") {
 
         }
