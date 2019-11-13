@@ -93,10 +93,29 @@ function IntializeSkillCardBoard() {
     }
 
 }
+//显示技能卡
 function DisplaySkillCardBoard(){
     document.body.appendChild(SkillCardContainterblock);
 }
 //芯片卡
-function CreateCoreCard(){
 
+var CoreCardContanerBlock = document.createElement("div");
+CoreCardContanerBlock.setAttribute("id","CoreCardContainter");
+
+var CoreCardContaner = document.createElement("div");
+CoreCardContaner.setAttribute("class","CoreCardContainter");
+
+var CoreCardContanerTitle = document.createElement("div");
+CoreCardContanerTitle.setAttribute("class","titleBar");
+CoreCardContanerTitle.setAttribute("style","font-size: 24px");
+CoreCardContanerTitle.innerHTML = '芯片种类概括';
+
+CoreCardContaner.appendChild(CoreCardContanerTitle);
+//创建芯片卡
+function CreateCoreCard(){
+    
+}
+//显示芯片卡
+function DisplayCoreCardBoard(){
+    document.body.appendChild(CoreCardContainterblock);
 }

@@ -4,8 +4,10 @@ createNavigationBar();
 
 CreateStoryBoard();
 IntializeSkillCardBoard();
+CreateWorldViewBoard();
 ClearBoard("SkillCardContainter");
 ClearBoard("StoryBoard");
+ClearBoard("WorldViewBoard");
 
 IfNaviButtonClick("button_storyboard","StoryBoard");
 IfNaviButtonClick("button_World","World");

@@ -13,9 +13,8 @@ body{
     }
 }
 @keyframes RotateFromScaleZero {
-    from { transform:scale(0,0);}
+    from {}
     to {
-        transform:scale(1,1);
         transform: rotate(3deg);
     }
 }
@@ -41,8 +40,9 @@ body{
     text-align: center;
 }
 .navbar{
+    max-width: 1024px;
     width: auto;
-    margin: 20px;
+    margin: 20px auto 20px auto;
     padding: 5px;
     background-color: rgb(234, 245, 245);
     border-radius: 0px;
@@ -70,6 +70,14 @@ body{
     height: auto;
     width: auto;
     
+    background-color: rgb(245, 245, 245);
+}
+/* 世界观样式 */
+.WorldViewContent{
+    margin: 20px;
+    border-radius: 20px;
+    padding: 50px;
+    color: rgb(180);
     background-color: rgb(245, 245, 245);
 }
 .SkillCardContainter{
@@ -116,7 +124,7 @@ body{
 
 }
 .SkillcardBlock:hover{
-    animation: ScaleLarge 0.2s ease-out;
+    animation: RotateFromScaleZero 0.2s ease-out;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -165,6 +173,12 @@ body{
     border: solid brown 1px;
     background-color: white;
 }
+/* 芯片卡的最外面的样式 */
+#SkillCardContainter,#StoryBoard,#CoreCardContainter,#WorldViewBoard{
+    max-width: 1100px;
+    margin: auto;
+}
+
 @media screen and (max-width:'1024px'){
 
 }
