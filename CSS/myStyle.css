@@ -154,7 +154,7 @@ body{
     padding: 5px;
     background-color: white;
     border: solid cornflowerblue 1px;
-    border-radius:10%;
+    border-radius:5px;
 }
 /* 故事卡内衬样式 */
 .insideCard{
@@ -162,14 +162,14 @@ body{
     background-color: rgb(255, 255, 255);
     box-shadow:rgba(26, 87, 230, 0.10) 0px 0px 10px 10px ;
     color: rgb(139, 139, 139);
-    border-radius:10px;
+    border-radius:5px;
 }
 /* 技能卡内衬样式 */
 .SkillCardInside{
     padding: 10px;
     background-color: rgb(255, 255, 255);
     color: rgb(139, 139, 139);
-    border-radius:10px;
+    border-radius:5px;
     border: solid goldenrod 1px;
     
 }
