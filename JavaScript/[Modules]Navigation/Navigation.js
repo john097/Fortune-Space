@@ -49,7 +49,7 @@ function createNavigationBar() {
     //加入到hierarchy
     navbar.appendChild(button);
     navbar.appendChild(button_World);
-    navbar.appendChild(button_MapGenerator);
+    //navbar.appendChild(button_MapGenerator);
     navbar.appendChild(button_ItemData);
     navbar.appendChild(button_More);
 
@@ -73,10 +73,10 @@ function createFootage() {
 function ClearBoard(id) {
     id = id || "none";
     board = document.getElementById(id);
-    if (board!=null) {
+    if (board != null) {
         document.body.removeChild(board);
     }
-    
+
 }
 
 
@@ -86,14 +86,16 @@ function CreateItemContainter() {
 }
 //事件点击案例
 function IfNaviButtonClick(my_id, my_event) {
-    this.button = document.getElementById(my_id)||"none";
+    this.button = document.getElementById(my_id) || null;
     this.button.onclick = function () {
         //事件名称
         if (my_event === "StoryBoard") {
-            
+
             //清除
-            ClearBoard("SkillCardContainter");
-            ClearBoard("CoreCardContainter");
+            ClearBoard("SkillCardblock");
+            ClearBoard("weaponCardblock");
+            ClearBoard("CoreCardblock");
+            ClearBoard("wtypeCardblock");
 
             ClearBoard("WorldViewBoard");
 
@@ -102,9 +104,11 @@ function IfNaviButtonClick(my_id, my_event) {
         } else if (my_event === "World") {
             //清除
             ClearBoard("StoryBoard");
-
-            ClearBoard("SkillCardContainter");
-            ClearBoard("CoreCardContainter");
+            //物品数据集
+            ClearBoard("SkillCardblock");
+            ClearBoard("weaponCardblock");
+            ClearBoard("CoreCardblock");
+            ClearBoard("wtypeCardblock");
 
             //显示
             DisplayWorldViewBoard();
@@ -113,37 +117,55 @@ function IfNaviButtonClick(my_id, my_event) {
         } else if (my_event === "ItemData") {
             //清除
             ClearBoard("StoryBoard");
-
             ClearBoard("WorldViewBoard");
 
-            
-            //创建
-            DisplaySkillCardBoard();
-            DisplayCoreCardBoard();
-        }else if (my_event === "More") {
 
-        }else if(my_event ==="ShowSkillCard"){
-            
-            //关闭
-            if (document.getElementById("SkillCardContent").style.height!="0px") {
-                HideSkillCardContent();
-            }else{
-                //显示
-                DisplaySkillCardContent();
-            }
-            //关闭
-            
-        }else if(my_event ==="ShowCoreCard"){
-            //关闭
-            if (document.getElementById("CoreCardContent").style.height!="0px") {
-                
-                HideCoreCardContent();
-            }else{
-                //显示
-                DisplayCoreCardContent();
-            }
-            
+            //创建
+            SkillCard.Displayblock();
+            CoreCard.Displayblock();
+            weaponCard.Displayblock();
+            weaponTypeCard.Displayblock();
+
+            IfListCardBtnClick("Core" + "CardTitle_btn", "ShowCoreCard");
+            IfListCardBtnClick("weapon" + "CardTitle_btn", "ShowWeaponCard");
+            IfListCardBtnClick("Skill" + "CardTitle_btn", "ShowSkillCard");
+            IfListCardBtnClick("wtype" + "CardTitle_btn", "ShowWtypeCard");
+
+        } else if (my_event === "More") {
+
         }
 
+
+    }
+}
+function IfListCardBtnClick(my_id, my_event) {
+    this.button = document.getElementById(my_id) || 'null';
+    this.button.onclick = function () {
+        //物品数据内的导航
+        if (my_event === "ShowSkillCard") {
+            if (document.getElementById("Skill" + "content").style.height != "0px") {
+                SkillCard.HidCard();
+            } else {
+                SkillCard.DisplayCard();
+            }
+        } else if (my_event === "ShowCoreCard") {
+            if (document.getElementById("Core" + "content").style.height != "0px") {
+                CoreCard.HidCard();
+            } else {
+                CoreCard.DisplayCard();
+            }
+        } else if (my_event === "ShowWeaponCard") {
+            if (document.getElementById("weapon" + "content").style.height != "0px") {
+                weaponCard.HidCard();
+            } else {
+                weaponCard.DisplayCard();
+            }
+        } else if (my_event === "ShowWtypeCard") {
+            if (document.getElementById("wtype" + "content").style.height != "0px") {
+                weaponTypeCard.HidCard();
+            } else {
+                weaponTypeCard.DisplayCard();
+            }
+        }
     }
 }
