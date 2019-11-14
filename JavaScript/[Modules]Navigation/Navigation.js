@@ -86,7 +86,7 @@ function CreateItemContainter() {
 }
 //事件点击案例
 function IfNaviButtonClick(my_id, my_event) {
-    this.button = document.getElementById(my_id);
+    this.button = document.getElementById(my_id)||"none";
     this.button.onclick = function () {
         //事件名称
         if (my_event === "StoryBoard") {
@@ -122,6 +122,15 @@ function IfNaviButtonClick(my_id, my_event) {
             DisplayCoreCardBoard();
         } else if (my_event === "More") {
 
+        }else if(my_event ==="ShowSkillCard"){
+            //显示
+            DisplaySkillCardContent();
+            //关闭
+        }else if(my_event ==="ShowCoreCard"){
+            //显示
+            DisplayCoreCardContent();
+            //关闭
         }
+
     }
 }

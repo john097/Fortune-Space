@@ -30,12 +30,12 @@ body{
         transform:scale(1,1);
     }
 }
-@keyframes TransLeft{
+@keyframes TransRight{
     form{
 
     }
     to{
-        transform: translate(0,-1em);
+        transform: translate(-1em,0);
     }
 }
 .banner{
@@ -61,7 +61,7 @@ body{
     background-color: rgb(234, 245, 245);
     border-radius: 0px;
     box-shadow: rgba(26, 87, 230, 0.10);
-    animation: ScaleAppear 0.6s;
+    animation: ScaleAppear 0.4s;
 }
 .footage{
     width: 100%;
@@ -109,6 +109,7 @@ body{
     padding: 10px;
     background-color: rgb(245, 245, 245);
 }
+
 /* 卡片的样式 */
 .card{
 
@@ -140,7 +141,7 @@ body{
 }
 .SkillcardBlock:hover,.SkillcardBlock:focus {
     background-color:  rgb(249, 254, 255);
-    animation: TransLeft 0.2s ease-out;
+    animation: TransRight 0.2s ease-out;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -148,6 +149,15 @@ body{
 .SkillcardBlock:active,.SkillcardBlock:visited {
     background-color: rgb(219, 232, 236);
     transform: translate(0,-1em);
+}
+/* 卡片出现样式 */
+#SkillCardContent,#CoreCardContent{
+    overflow: hidden;
+    /* height: 0; */
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
 }
 /* 技能卡片样式 */
 .Skillcard{
@@ -182,6 +192,22 @@ body{
     box-shadow:rgba(26, 87, 230, 0.10) 0px 0px 10px 10px ;
     border: solid goldenrod 1px;
     background-color: white;
+    
+}
+.titlefont{
+    text-align: left;
+    font-size: 18px;
+    border-radius: 10px 10px 0 0;
+    
+}
+.titlebtn{
+    cursor: pointer;
+}
+.titlebtn:hover{
+    background-color:  rgb(255, 250, 235);
+}
+.titlebtn:active{
+    background-color: rgb(245, 244, 233);
 }
 /* 技能卡距离字段样式 */
 .SkillCardTitleBar{
@@ -194,10 +220,12 @@ body{
     background-color: white;
 }
 /* 芯片卡的最外面的样式 */
-#SkillCardContainter,#StoryBoard,#CoreCardContainter,#WorldViewBoard,#CoreCardContainter{
+#SkillCardContainter,#StoryBoard,
+#CoreCardContainter,#WorldViewBoard,#CoreCardContainter
+{
     max-width: 1100px;
     margin: auto;
-    animation: ScaleAppear 0.6s;
+    animation: ScaleAppear 0.4s;
 }
 
 @media screen and (max-width:'1024px'){

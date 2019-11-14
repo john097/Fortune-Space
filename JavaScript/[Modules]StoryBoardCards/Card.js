@@ -32,7 +32,7 @@ function createCard(str, str2) {
 //随机生成故事卡
 function CreateStoryBoard() {
     
-    for (const iterator of story) {
+    for (const iterator of story_db) {
         //if (Math.random() > 0.5);
         createCard(iterator.story, "ID:"+iterator.id+";"+iterator.title);
     }
@@ -45,17 +45,23 @@ function DisplayStoryBoard(){
 //屏障
 var SkillCardContainterblock = document.createElement("div");
 SkillCardContainterblock.setAttribute("id","SkillCardContainter");
-
+//大盒子
 var SkillCardContainter = document.createElement("div");
 SkillCardContainter.setAttribute("class","SkillCardContainter");
+//标题
+var SkillCardContainerTitle = document.createElement("div");
+SkillCardContainerTitle.setAttribute("class","titleBar titlefont titlebtn");
+SkillCardContainerTitle.setAttribute("id","SkillCardTitle_btn");
 
-var SkillCardConttainerTitle = document.createElement("div");
-SkillCardConttainerTitle.setAttribute("class","titleBar");
-SkillCardConttainerTitle.setAttribute("style","font-size: 24px");
-SkillCardConttainerTitle.innerHTML = '技能种类概括';
-SkillCardContainter.appendChild(SkillCardConttainerTitle);
+SkillCardContainerTitle.innerHTML = '&nbsp;&nbsp;技能资料库';
+//套娃
+var SkillCardContent = document.createElement("div");
+SkillCardContent.setAttribute("id","SkillCardContent");
 
+SkillCardContainter.appendChild(SkillCardContainerTitle);
+SkillCardContainter.appendChild(SkillCardContent);
 SkillCardContainterblock.appendChild(SkillCardContainter);
+
 function CreateSkillCard(str,str2,str3,id){
     str = str || "none";
     str2 = str2 || "none";
@@ -82,8 +88,7 @@ function CreateSkillCard(str,str2,str3,id){
     this.mycardblock.appendChild(titleBar);
     this.mycardblock.appendChild(insideCard);
 
-    SkillCardContainter.appendChild(mycardblock);
-    document.body.appendChild(SkillCardContainterblock);
+    SkillCardContent.appendChild(mycardblock);
 }
 //生成技能卡
 function IntializeSkillCardBoard() {
@@ -94,10 +99,17 @@ function IntializeSkillCardBoard() {
     }
 
 }
-//显示技能卡
+//显示技能卡的大框架
 function DisplaySkillCardBoard(){
     document.body.appendChild(SkillCardContainterblock);
+    IfNaviButtonClick("SkillCardTitle_btn","ShowSkillCard");
 }
+//显示技能卡的小框架
+function DisplaySkillCardContent(){
+    console.log("s");
+    SkillCardContent.setAttribute("style","height:auto");
+}
+
 
 
 //芯片卡
@@ -109,11 +121,15 @@ var CoreCardContainer = document.createElement("div");
 CoreCardContainer.setAttribute("class","CoreCardContainter");
 
 var CoreCardContanerTitle = document.createElement("div");
-CoreCardContanerTitle.setAttribute("class","titleBar");
-CoreCardContanerTitle.setAttribute("style","font-size: 24px");
-CoreCardContanerTitle.innerHTML = '芯片种类概括';
+CoreCardContanerTitle.setAttribute("class","titleBar titlefont titlebtn");
+SkillCardContainerTitle.setAttribute("id","CoreCardTitle_btn");
+CoreCardContanerTitle.innerHTML = '&nbsp;&nbsp;芯片资料库';
+//套娃
+var CoreCardContent = document.createElement("div");
+CoreCardContent.setAttribute("id","CoreCardContent");
 
 CoreCardContainer.appendChild(CoreCardContanerTitle);
+CoreCardContainer.appendChild(CoreCardContent);
 CoreCardContanerBlock.appendChild(CoreCardContainer);
 //创建芯片卡
 function CreateCoreCard(str,str2,str3,id){
@@ -141,8 +157,7 @@ function CreateCoreCard(str,str2,str3,id){
     this.mycardblock.appendChild(mycard);
     this.mycardblock.appendChild(titleBar);
     this.mycardblock.appendChild(insideCard);
-    CoreCardContainer.appendChild(mycardblock);
-    document.body.appendChild(CoreCardContanerBlock);
+    CoreCardContent.appendChild(mycardblock);
 }
 //生成技能卡
 function IntializeCoreCardBoard() {
@@ -156,4 +171,12 @@ function IntializeCoreCardBoard() {
 //显示芯片卡
 function DisplayCoreCardBoard(){
     document.body.appendChild(CoreCardContanerBlock);
+    IfNaviButtonClick("CoreCardTitle_btn","ShowCoreCard");
+}
+//显示技能卡的小框架
+function DisplayCoreCardContent(){
+    CoreCardContainer.setAttribute("style","height:auto");
+}
+function HideCoreCardContent(){
+    CoreCardContainer.setAttribute("style","height:0");
 }
