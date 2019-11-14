@@ -153,7 +153,7 @@ body{
 /* 卡片出现样式 */
 #SkillCardContent,#CoreCardContent{
     overflow: hidden;
-    /* height: 0; */
+    height: 0;
     -webkit-transition-property: all;
     transition-property: all;
     -webkit-transition-duration: .3s;

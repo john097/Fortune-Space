@@ -101,15 +101,17 @@ function IntializeSkillCardBoard() {
 }
 //显示技能卡的大框架
 function DisplaySkillCardBoard(){
+    
     document.body.appendChild(SkillCardContainterblock);
     IfNaviButtonClick("SkillCardTitle_btn","ShowSkillCard");
 }
 //显示技能卡的小框架
 function DisplaySkillCardContent(){
-    console.log("s");
-    SkillCardContent.setAttribute("style","height:auto");
+    SkillCardContent.style.height = "fit-content";
 }
-
+function HideSkillCardContent(){
+    SkillCardContent.style.height = "0px";
+}
 
 
 //芯片卡
@@ -122,11 +124,12 @@ CoreCardContainer.setAttribute("class","CoreCardContainter");
 
 var CoreCardContanerTitle = document.createElement("div");
 CoreCardContanerTitle.setAttribute("class","titleBar titlefont titlebtn");
-SkillCardContainerTitle.setAttribute("id","CoreCardTitle_btn");
+CoreCardContanerTitle.setAttribute("id","CoreCardTitle_btn");
 CoreCardContanerTitle.innerHTML = '&nbsp;&nbsp;芯片资料库';
 //套娃
 var CoreCardContent = document.createElement("div");
 CoreCardContent.setAttribute("id","CoreCardContent");
+
 
 CoreCardContainer.appendChild(CoreCardContanerTitle);
 CoreCardContainer.appendChild(CoreCardContent);
@@ -158,7 +161,9 @@ function CreateCoreCard(str,str2,str3,id){
     this.mycardblock.appendChild(titleBar);
     this.mycardblock.appendChild(insideCard);
     CoreCardContent.appendChild(mycardblock);
+
 }
+
 //生成技能卡
 function IntializeCoreCardBoard() {
     
@@ -170,13 +175,14 @@ function IntializeCoreCardBoard() {
 }
 //显示芯片卡
 function DisplayCoreCardBoard(){
+    
     document.body.appendChild(CoreCardContanerBlock);
     IfNaviButtonClick("CoreCardTitle_btn","ShowCoreCard");
 }
 //显示技能卡的小框架
 function DisplayCoreCardContent(){
-    CoreCardContainer.setAttribute("style","height:auto");
+    CoreCardContent.style.height ="fit-content";
 }
 function HideCoreCardContent(){
-    CoreCardContainer.setAttribute("style","height:0");
+    CoreCardContent.style.height ="0px";
 }

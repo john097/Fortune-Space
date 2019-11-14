@@ -120,16 +120,29 @@ function IfNaviButtonClick(my_id, my_event) {
             //创建
             DisplaySkillCardBoard();
             DisplayCoreCardBoard();
-        } else if (my_event === "More") {
+        }else if (my_event === "More") {
 
         }else if(my_event ==="ShowSkillCard"){
-            //显示
-            DisplaySkillCardContent();
+            
             //关闭
+            if (document.getElementById("SkillCardContent").style.height!="0px") {
+                HideSkillCardContent();
+            }else{
+                //显示
+                DisplaySkillCardContent();
+            }
+            //关闭
+            
         }else if(my_event ==="ShowCoreCard"){
-            //显示
-            DisplayCoreCardContent();
             //关闭
+            if (document.getElementById("CoreCardContent").style.height!="0px") {
+                
+                HideCoreCardContent();
+            }else{
+                //显示
+                DisplayCoreCardContent();
+            }
+            
         }
 
     }
