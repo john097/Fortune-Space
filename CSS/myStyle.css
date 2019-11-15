@@ -45,15 +45,16 @@ body{
     }
 }
 .banner{
-    width: 100%;
     margin: 0;
     height: 300px;
     background-color:black;
-    background-image: url('../Image/banner-backgroundimg.jpg');
+    /* background-image: url('../Image/banner-backgroundimg.jpg'); */
     background-image: url('../Image/bg.png');
     background-repeat:no-repeat;
     background-position: center;
     background-size: auto 100%;
+    box-shadow: rgba(45, 255, 245, 0.2) 0px 20px 60px 20px;
+    animation: ScaleAppearX 0.3s;
 }
 .Navigation_Block{
     display:inline;
