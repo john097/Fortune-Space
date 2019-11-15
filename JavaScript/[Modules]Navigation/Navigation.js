@@ -7,7 +7,16 @@ function createBanner() {
 }
 //导航栏
 function createNavigationBar() {
-
+    //标题
+    var navbarTitle = document.createElement("div");
+    navbarTitle.innerHTML = "极乐世界Fortune-Space&nbsp&nbsp资料站";
+    navbarTitle.setAttribute("style","float:left")
+    navbarTitle.style.color = "white";
+    navbarTitle.style.display = "inline";
+    navbarTitle.style.fontSize = "18px";
+    navbarTitle.style.fontWeight = 'bold';
+    navbarTitle.style.padding = '10px';
+    
     //故事板按钮
     var button = document.createElement("button");
     button.setAttribute("class", 'button button-primary button-rounded');
@@ -47,6 +56,7 @@ function createNavigationBar() {
     block.setAttribute('id', 'Navigation_Block');
 
     //加入到hierarchy
+    navbar.appendChild(navbarTitle);
     navbar.appendChild(button);
     navbar.appendChild(button_World);
     //navbar.appendChild(button_MapGenerator);

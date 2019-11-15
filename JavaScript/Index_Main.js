@@ -1,9 +1,9 @@
 //创建头部
-createBanner();
 createNavigationBar();
+createBanner();
+
 
 CreateStoryBoard();
-
 CreateWorldViewBoard();
 
 ClearBoard("SkillCardContainter");

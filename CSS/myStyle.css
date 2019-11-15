@@ -1,6 +1,6 @@
 
 body{
-    background-color: #394e53;
+    background-color: #314d6d;
     animation : GradientAnimateBackgroundcol 1.6s;
 
     margin: 0%;
@@ -9,7 +9,7 @@ body{
 @keyframes GradientAnimateBackgroundcol {
     from {  background-color: black;}
     to {
-        background-color: #394e53;
+        background-color: #314d6d;
     }
 }
 @keyframes RotateFromScaleZero {
@@ -30,6 +30,12 @@ body{
         transform:scale(1,1);
     }
 }
+@keyframes ScaleAppearX {
+    from { transform:scale(0,1);}
+    to {
+        transform:scale(1,1);
+    }
+}
 @keyframes TransRight{
     form{
 
@@ -41,9 +47,10 @@ body{
 .banner{
     width: 100%;
     margin: 0;
-    height: 200px;
+    height: 300px;
     background-color:black;
     background-image: url('../Image/banner-backgroundimg.jpg');
+    background-image: url('../Image/bg.png');
     background-repeat:no-repeat;
     background-position: center;
     background-size: auto 100%;
@@ -54,14 +61,13 @@ body{
     text-align: center;
 }
 .navbar{
-    max-width: 1024px;
-    width: auto;
-    margin: 20px auto 20px auto;
+
+    margin: auto;
     padding: 5px;
-    background-color: rgb(234, 245, 245);
+    background-color: rgb(0, 0, 0);
     border-radius: 0px;
-    box-shadow: rgba(26, 87, 230, 0.10);
-    animation: ScaleAppear 0.4s;
+    transform-origin: top;
+    animation: ScaleAppearX 0.3s;
 }
 .footage{
     width: 100%;
@@ -78,9 +84,9 @@ body{
     align-items: flex-start;
     align-content: flex-start;
     justify-content: center;
-    margin: 10px 40px;
+    margin: 20px;
     border-radius: 10px;
-    background-color: rgb(245, 245, 245);
+    /* background-color: rgba(255, 255, 255, 0.5); */
     padding: 20px;
 }
 /* 世界观样式 */
@@ -91,15 +97,15 @@ body{
     color: rgb(180);
     background-color: rgb(245, 245, 245);
 }
-
+/* 固定长度 */
 
 /* 卡片的样式 */
 .card{
     width: 250px;
     margin: 1em;
-    background-color: rgb(251, 250, 245);
-    box-shadow: rgba(26, 87, 230, 0.1) 0px 0px 10px 10px;
-    border-radius: 15px;
+    background-color: aliceblue;
+    box-shadow: rgba(26, 87, 230, 0.1) 20px 20px 22px;
+    border-radius: 10px;
     padding: 10px;
 }
 .card:hover{
@@ -112,34 +118,30 @@ body{
 .insideCard{
     padding: 10px;
     background-color: rgb(255, 255, 255);
-    box-shadow:rgba(26, 87, 230, 0.10) 0px 0px 10px 10px ;
     color: rgb(139, 139, 139);
-    border-radius:5px;
+    border-radius:15px;
 }
-.SkillCardContainter,.CoreCardContainter,.CardContainer{
+.CoreCardContainter,.CardContainer{
     display: flex;
     flex-flow: column;
     flex-grow: initial;
-
     justify-content: center;
-
-    margin: 15px 40px;
-    border-radius: 8px;
+    margin: 10px;
+    /* border-radius: 8px; */
     background-color: rgb(245, 245, 245);
-}
-.SkillcardBlock,.ListCardBlock{
+    padding: 5px;
+    box-shadow: rgba(0,0,0,0.3) 10px 15px;
 
-    display:flex;
-    flex-flow: row;
+}
+.ListCardBlock{
+    display: grid;
+    grid-template-columns: 60px 10% auto;
     align-items: center;
-    margin:5px;
-    background-color:  rgb(251, 250, 245);
-    box-shadow:rgba(26, 87, 230, 0.10) 0px 0px 10px 10px ;
-    border-radius:15px;
+    background-color: white;
+    box-shadow: rgba(26, 87, 230, 0.1) 0px 10px 10px 0px;
     padding: 10px;
-
+    margin: 10px;
 }
-.SkillcardBlock:hover,.SkillcardBlock:focus ,
 .ListCardBlock:hover,.ListCardBlock:focus{
     background-color:  rgb(249, 254, 255);
     animation: TransRight 0.2s ease-out;
@@ -147,13 +149,12 @@ body{
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.SkillcardBlock:active,.SkillcardBlock:visited ,
 .ListCardBlock:active{
     background-color: rgb(219, 232, 236);
     transform: translate(0,-1em);
 }
 /* 卡片出现样式 */
-#SkillCardContent,#CoreCardContent,.CardContent{
+#CoreCardContent,.CardContent{
     overflow: hidden;
     height: 0;
     transition: 0.3s;
@@ -161,68 +162,69 @@ body{
 
 
 /* 技能卡片样式 */
-.Skillcard,.ListCard{
-    padding: 5px;
-    background-color: white;
-    border: solid cornflowerblue 1px;
-    border-radius:5px;
-}
+.ListCard,
 /* 技能卡内衬样式 */
-.SkillCardInside,.ListCardInside{
+.ListCardInside{
     padding: 10px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(139, 139, 139);
-    border-radius:5px;
-    border: solid goldenrod 1px;
-    
+
 }
 /* 技能卡距离字段样式 */
-.SkillCardTitleBar,.ListCardTile{
-    margin:10px;
+.ListCardTile{
     padding: 5px;
-    text-align: center;
-    border-radius:15px;
-
-    border: solid brown 1px;
-    background-color: white;
+    text-align: left;
 }
 /* 故事板标题样式 */
 .titleBar{
-    margin: 10px;
     padding: 5px;
     text-align: center;
-    border-radius: 15px;
-    box-shadow: rgba(26, 87, 230, 0.1) 0px 0px 10px 10px;
-    border: solid goldenrod 1px;
     background-color: white;
+}
+.titleBarStory{
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    margin: 0 0 10px;
+    border-radius: 20px;
 }
 .titlefont{
     text-align: left;
     font-size: 18px;
-    border-radius: 10px 10px 0 0;
+    /* font-family: monospace; */
     
 }
 .titlebtn{
     cursor: pointer;
+    transition: 0.4s;
+    border-radius: 5px;
 }
 .titlebtn:hover{
-    background-color:  rgb(255, 250, 235);
+    background-color: #c7d7e2;
 }
 .titlebtn:active{
     background-color: rgb(245, 244, 233);
 }
 
 /* 芯片卡的最外面的样式 */
-#SkillCardContainter,#StoryBoard,
-#CoreCardContainter,#WorldViewBoard,#CoreCardContainter,
-#weaponCardblock,#CoreCardblock,#SkillCardblock,#wtypeCardblock
+#StoryBoard,
+#WorldViewBoard
 {
     max-width: 1100px;
     margin: auto;
     animation: ScaleAppear 0.4s;
     transform-origin:top;
 }
-
+#weaponCardblock,#CoreCardblock,#SkillCardblock,#wtypeCardblock{
+    max-width: 1100px;
+    margin: auto;
+    animation: ScaleAppearX 0.4s;
+    transform-origin:left;
+}
+.WeaponCardGridLayout{
+    grid-template-columns: 60px 10% 10% 10% auto auto;
+}
+.wtypeCardGridLayout{
+    grid-template-columns: 60px auto;
+}
 @media screen and (max-width:'1024px'){
 
 }
