@@ -200,16 +200,16 @@
   .button-primary:hover, .button-primary:focus,
   .button-primary-flat:hover,
   .button-primary-flat:focus {
-    background-color: #4cb0f9;
-    border-color: #4cb0f9;
+    background-color: #40aba0;
+    border-color: #49ffed;
     color: #FFF; }
   .button-primary:active, .button-primary.active, .button-primary.is-active,
   .button-primary-flat:active,
   .button-primary-flat.active,
   .button-primary-flat.is-active {
-    background-color: #2798eb;
-    border-color: #2798eb;
-    color: #0880d7; }
+    background-color: #1f746b;
+    border-color: #1f746b;
+    color: #0b332e; }
 
 .button-plain,
 .button-plain-flat {

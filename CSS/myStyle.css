@@ -88,7 +88,7 @@ body{
     margin: 20px;
     border-radius: 10px;
     /* background-color: rgba(255, 255, 255, 0.5); */
-    padding: 20px;
+    
 }
 /* 世界观样式 */
 .WorldViewContent{
@@ -102,7 +102,7 @@ body{
 
 /* 卡片的样式 */
 .card{
-    width: 250px;
+    width: 260px;
     margin: 1em;
     background-color: aliceblue;
     box-shadow: rgba(26, 87, 230, 0.1) 20px 20px 22px;
@@ -207,7 +207,7 @@ body{
 
 /* 芯片卡的最外面的样式 */
 #StoryBoard,
-#WorldViewBoard
+#WorldViewBoard,#met_Block
 {
     max-width: 1100px;
     margin: auto;
@@ -225,6 +225,50 @@ body{
 }
 .wtypeCardGridLayout{
     grid-template-columns: 60px auto;
+}
+/* 导航栏更多 */
+
+.dropdown_block{
+    position: absolute;
+    top: 100%;
+    display: none;
+    width: 100px;
+    right: 5px;
+}
+
+.dropdown_content{
+    display: flex;
+    flex-flow: column;
+    /* padding: 5px 40px; */
+
+    box-shadow: rgba(0, 0, 0, 0.1) 10px 10px 0 0;
+}
+.dropdown_Cell{
+    transition: .3s;
+}
+.dropdown_Cell:hover{
+    color: #40aba0;
+}
+#button_More{
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 40px;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 5px;
+}
+#button_More:hover .dropdown_block{
+ 
+    display: inline;
+}
+#button_More:hover{
+    background-color: #40aba0;
 }
 @media screen and (max-width:'1024px'){
 
