@@ -10,13 +10,13 @@ function createNavigationBar() {
     //标题
     var navbarTitle = document.createElement("div");
     navbarTitle.innerHTML = "极乐世界Fortune-Space&nbsp&nbsp资料站";
-    navbarTitle.setAttribute("style","float:left")
+    navbarTitle.setAttribute("style", "float:left")
     navbarTitle.style.color = "white";
     navbarTitle.style.display = "inline";
     navbarTitle.style.fontSize = "18px";
     navbarTitle.style.fontWeight = 'bold';
     navbarTitle.style.padding = '10px';
-    
+
     //故事板按钮
     var button = document.createElement("button");
     button.setAttribute("class", 'button button-primary button-rounded');
@@ -29,28 +29,26 @@ function createNavigationBar() {
     button_World.setAttribute("id", 'button_World');
     button_World.innerHTML = "游戏介绍";
 
-    //地图生成按钮
-    var button_MapGenerator = document.createElement("button");
-    button_MapGenerator.setAttribute("class", 'button button-primary button-rounded');
-    button_MapGenerator.setAttribute("id", 'button_MapGenerator');
-    button_MapGenerator.innerHTML = "地图生成";
-
     //物品数据按钮
     var button_ItemData = document.createElement("button");
     button_ItemData.setAttribute("class", 'button button-primary button-rounded');
     button_ItemData.setAttribute("id", 'button_ItemData');
     button_ItemData.innerHTML = "资料库";
 
+
+
     //更多按钮
     var button_More = document.createElement("div");
-    //button_More.setAttribute("class", 'button button-primary button-rounded');
     button_More.setAttribute("id", 'button_More');
     button_More.innerHTML = "更多";
-        //会议记录下拉菜单
+
+    //下拉菜单内容
     var more_dropdown = new DropDown('more')
-    more_dropdown.CreateCell(0,'会议记录')
+    more_dropdown.CreateCell(0, '会议记录')
+    more_dropdown.CreateCell(1, '角色属性')
+    more_dropdown.CreateCell(2, '芯片具体')
+
     button_More.appendChild(more_dropdown.block)
-    
 
     //导航栏
     var navbar = document.createElement("div");
@@ -64,7 +62,6 @@ function createNavigationBar() {
     navbar.appendChild(navbarTitle);
     navbar.appendChild(button);
     navbar.appendChild(button_World);
-    //navbar.appendChild(button_MapGenerator);
     navbar.appendChild(button_ItemData);
     navbar.appendChild(button_More);
 
@@ -93,7 +90,20 @@ function ClearBoard(id) {
     }
 
 }
+function ClearAllBoard() {
 
+    ClearBoard("SkillCardblock");
+    ClearBoard("weaponCardblock");
+    ClearBoard("CoreCardblock");
+    ClearBoard("wtypeCardblock");
+
+    ClearBoard('WorldView'+'_Block');
+
+    ClearBoard('chip_doc'+'_Block');
+    ClearBoard('met_doc'+'_Block')
+    ClearBoard('chrins'+'_Block')
+    ClearBoard("StoryBoard");
+}
 
 //事件点击案例
 function IfNaviButtonClick(my_id, my_event) {
@@ -103,34 +113,16 @@ function IfNaviButtonClick(my_id, my_event) {
         if (my_event === "StoryBoard") {
 
             //清除
-            ClearBoard("SkillCardblock");
-            ClearBoard("weaponCardblock");
-            ClearBoard("CoreCardblock");
-            ClearBoard("wtypeCardblock");
-            ClearBoard("WorldViewBoard");
-            ClearBoard("met_Block");
+            ClearAllBoard();
 
             //显示
             DisplayStoryBoard();
         } else if (my_event === "World") {
-            //清除
-            ClearBoard("StoryBoard");
-            //物品数据集
-            ClearBoard("SkillCardblock");
-            ClearBoard("weaponCardblock");
-            ClearBoard("CoreCardblock");
-            ClearBoard("wtypeCardblock");
-            ClearBoard("met_Block");
-
+            ClearAllBoard();
             //显示
-            DisplayWorldViewBoard();
-        } else if (my_event === "MapGenerator") {
-
+            worldview_doc.display()
         } else if (my_event === "ItemData") {
-            //清除
-            ClearBoard("StoryBoard");
-            ClearBoard("WorldViewBoard");   
-            ClearBoard("met_Block");
+            ClearAllBoard();
 
             //创建
             SkillCard.Displayblock();
@@ -144,29 +136,28 @@ function IfNaviButtonClick(my_id, my_event) {
             IfListCardBtnClick("wtype" + "CardTitle_btn", "ShowWtypeCard");
 
         } else if (my_event === "More") {
-            //清理
-            ClearBoard("StoryBoard");
-            ClearBoard("SkillCardblock");
-            ClearBoard("weaponCardblock");
-            ClearBoard("CoreCardblock");
-            ClearBoard("wtypeCardblock");
-            ClearBoard("WorldViewBoard");
-            //ClearBoard("met_Block");
-        }else if(my_event ==='more_dropdown_0'){
-            //清理
-            ClearBoard("StoryBoard");
-            ClearBoard("SkillCardblock");
-            ClearBoard("weaponCardblock");
-            ClearBoard("CoreCardblock");
-            ClearBoard("wtypeCardblock");
-            ClearBoard("WorldViewBoard");
-
-            DisplayMetViewBoard();
+            IfMoreDropDownBtnClick('dropdown_cell_0', 'meeting_doc');
+            IfMoreDropDownBtnClick('dropdown_cell_1', 'chr_doc');
+            IfMoreDropDownBtnClick('dropdown_cell_2', 'chip_doc');
         }
-
-
+        
     }
 }
+function IfMoreDropDownBtnClick(my_id, my_event) {
+    this.button = document.getElementById(my_id) || 'null';
+    this.button.onclick = function () {
+        //物品数据内的导航
+        ClearAllBoard();
+        if (my_event === "meeting_doc") {
+            meeting_doc.display()
+        }else if (my_event === "chr_doc") {
+            chrinspect_doc.display()
+        }else if (my_event === "chip_doc") {
+            chip_doc.display()
+        }
+    }
+}
+
 function IfListCardBtnClick(my_id, my_event) {
     this.button = document.getElementById(my_id) || 'null';
     this.button.onclick = function () {

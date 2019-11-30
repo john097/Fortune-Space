@@ -1,3 +1,5 @@
+//下拉菜单
+
 function DropDown(id){
     this.id = id||null
     this.block = document.createElement('div')
@@ -22,7 +24,7 @@ function DropDown(id){
         this.content.appendChild(this.cell)
         
     }
-    this.InitCell = function(count){
+    this.InitCells = function(count){
         for (let index = 0; index < count; index++) {
             this.CreateCell(index)
         }

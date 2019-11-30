@@ -1,35 +1,79 @@
-var worldContainter = document.createElement("div");
-var worldBlock = document.createElement("div");
+//文档型生成
 
-worldBlock.setAttribute("id","WorldViewBoard");
-worldContainter.setAttribute("class","WorldViewContent");
+//临时-世界观的文档
+var worldview_doc = new viewBoardDoc('WorldView')
+worldview_doc.creat('FortuneDatabase/worldViewBoard_doc_db.txt')
 
-function CreateWorldViewBoard(){
-    worldContainter.innerHTML = WorldViewBoard_Db;
+//-会议文档
+var meeting_doc = new viewBoardDoc('met_doc')
+meeting_doc.creat('FortuneDatabase/meeting_01_doc_db.txt')
+
+//角色属性文档
+var chrinspect_doc = new viewBoardDoc('chrins')
+chrinspect_doc.creat('FortuneDatabase/chr_doc_db.txt')
+//-芯片文档
+var chip_doc = new viewBoardDoc('chip_doc');
+chip_doc.creat('FortuneDatabase/chip_doc_db.txt')
+
+
+
+
+//!----------------------------------------------
+
+//看板文档通用格式
+function viewBoardDoc(id) {
+
+    this.id = id || null
+
+    this.content = document.createElement("div")
+    this.block = document.createElement("div")
+
+    this.block.setAttribute("id", this.id+"_Block")
+    this.block.setAttribute("class", "ViewBoardBlock")
+    this.content.setAttribute("class", "ViewBoardContent")
+
+    this.creat = function (url) {
+        this.url = url||null
+        loadXMLDoc(this.url, this.content)
+    }
+    this.block.appendChild(this.content)
+
+    this.display = function () {
+        document.body.appendChild(this.block)
+    }
+
 }
-worldBlock.appendChild(worldContainter);
 
+//通用的加载文件函数ajax
 
-function DisplayWorldViewBoard(){
-    document.body.appendChild(worldBlock);
-}
+function loadXMLDoc(url, Xcontent) {
+    let xmlhttp;
+    xmlhttp = null;
 
+    if (window.XMLHttpRequest) {// code for Firefox, Opera, IE7, etc.
+        xmlhttp = new XMLHttpRequest();
+    }
+    else if (window.ActiveXObject) {// code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    if (xmlhttp != null) {
+        xmlhttp.onreadystatechange = state_Change;
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send(null);
+    }
+    else {
+        alert("Your browser does not support XMLHTTP.");
+    }
 
+    function state_Change() {
+        if (xmlhttp.readyState == 4) {// 4 = "loaded"
+            if (xmlhttp.status == 200) {// 200 = "OK"
+                Xcontent.innerHTML = xmlhttp.responseText;
+            }
+            else {
+                alert("Problem retrieving data:" + xmlhttp.statusText);
+            }
+        }
+    }
 
-
-//temp metting 
-var met_content = document.createElement("div");
-var met_Block = document.createElement("div");
-
-met_Block.setAttribute("id","met_Block");
-
-met_content.setAttribute("class","WorldViewContent");
-
-function CreateMetViewBoard(){
-    met_content.innerHTML = meeting_db[0].content;
-}
-met_Block.appendChild(met_content);
-
-function DisplayMetViewBoard(){
-    document.body.appendChild(met_Block);
 }

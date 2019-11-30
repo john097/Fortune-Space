@@ -1,0 +1,74 @@
+﻿
+<DIV class=WordSection1 style="LAYOUT-GRID:  15.6pt none"><H4><SPAN class=2><SPAN style="FONT-SIZE: 16pt; FONT-WEIGHT: normal; LINE-HEIGHT: 156%">会议记录</SPAN></SPAN>：</H4>
+<P class=MsoNormal><SPAN lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></SPAN></P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>枪械：主要可以进行改造的部件确定为，枪头（握持方式），枪尾（伤害类型，工作方式，工作速度影响，附加），不可更换小模块部件，只能替换枪头和枪尾，具体可替换词条出现在枪械核心的文档里。</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>枪械部件的获得方式：<SPAN lang=EN-US>3d</SPAN>打印（通过<SPAN class=GramE>打怪获得</SPAN>的货币换取），随机抽奖（宝箱，老虎机等等，决定权在于场景主题），破坏物掉落。</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>芯片卡确定为：芯片卡只能插在人体身上，对人增加特殊效果，可叠加，插槽数暂定为不限制。</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>画面风格确定为：手绘<SPAN class=SpellE><SPAN lang=EN-US>pbr</SPAN></SPAN>具体画面样式请参考游戏（守望先锋）</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=X-NONE style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings; mso-ansi-language: X-NONE"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>游戏关卡为：小故事背景主题的地图，地图规模确定为一个海港海湾的大小，永远有一个<SPAN class=GramE>明确会</SPAN>首先对你造成<SPAN style="mso-ansi-language: X-NONE">伤害的对立生物，游戏目标是击败以进入传送门通过到下一关。<SPAN lang=X-NONE><?xml:namespace prefix = "o" ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=X-NONE style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings; mso-ansi-language: X-NONE"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN><SPAN style="mso-ansi-language: X-NONE">游戏故事线确定为：现实世界和数据化世界并存，并且数据化世界不是完美无缺的世界，而是人工制造根据残缺的历史资料模仿的世界。<SPAN lang=X-NONE><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=X-NONE style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings; mso-ansi-language: X-NONE"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN><SPAN style="mso-ansi-language: X-NONE">关卡与关卡之间的连接：传送门，实体传送门，传送期间穿插现实世界的故事进行对故事的补全和讲述。<SPAN lang=X-NONE><o:p></o:p></SPAN></SPAN></P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN><SPAN style="mso-ansi-language: X-NONE">每过一关都会增加世界崩坏度：崩坏层度体现于，怪物的种类，场景的分裂，多重世界，镜像世界等等，更多参考<SPAN class=GramE>盗梦空间</SPAN>和游戏</SPAN><SPAN lang=EN-US>transference </SPAN></P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>崩坏的怪物：崩坏的怪物确定为<SPAN lang=EN-US>3</SPAN>种，爆浆怪，错乱物体怪，瘦长<SPAN class=GramE>油影怪</SPAN>。分别是小怪，大怪，精英怪。</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>最终<SPAN lang=EN-US>boss</SPAN>：确定为<SPAN lang=EN-US>bug</SPAN>之王，产生<SPAN lang=EN-US>bug</SPAN>和分裂人格主要影响的一个程序是一个人形的管理员<SPAN class=GramE>权限级</SPAN>的人物，为了系统升级和扰乱秩序而产生的<SPAN lang=EN-US>bug</SPAN>人形管理员。</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>击败最终<SPAN lang=EN-US>boss</SPAN>：会到达一个房间，枪械核心中意识出现的房间，玩家可以做出决定，决定获得永生，还是消除记忆回到原来的世界。</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>玩家开始默认产生一把固定武器。</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>角色三选<SPAN class=GramE>一</SPAN>，产生的影响是，角色的数值和初始武器的不同。</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>枪<SPAN lang=EN-US>ai</SPAN>总是会对场景中那些未来人模仿过去场景时一些不合理摆放资源来进行吐槽。</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; LINE-HEIGHT: 115%; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>游戏过场动画使用木偶戏进行对现实世界观的补全。</P>
+<P class=MsoNormal><B><SPAN style="FONT-SIZE: 12pt">工作上进行便捷调整</SPAN></B>：</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>查看游戏现有资料网站确定为<SPAN lang=EN-US>john097.github.io/Fortune-Space/index.html</SPAN></P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>更改现有游戏资料文档请移步<SPAN class=GramE>群聊内</SPAN>搜索或者进行索要</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN><SPAN lang=EN-US>Github</SPAN>项目请使用<SPAN lang=EN-US>unity2019.1.14</SPAN>版本进行开发</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>确定游戏物件比较多且庞大</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>游戏数据库请进行补全</P>
+<P class=MsoListParagraph style="MARGIN-LEFT: 21pt; TEXT-INDENT: -21pt; mso-char-indent-count: 0; mso-list: l0 level1 lfo1"><SPAN lang=EN-US style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><SPAN style="mso-list: Ignore">l<SPAN style='FONT: 7pt "Times New Roman"'>&nbsp; </SPAN></SPAN></SPAN>大家可以开始着手撰写<SPAN lang=EN-US>200</SPAN>到<SPAN lang=EN-US>300</SPAN>字以内的小故事（因场景使用小故事主题进行创作）</P>
+<P class=MsoNormal><SPAN lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal><SPAN lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal><SPAN lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal><SPAN lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal><SPAN lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal><SPAN lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal>实际记录文档：</P>
+<P class=MsoNormal><SPAN lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal>未来城市：</P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0">秩序：每个人都似乎循规蹈矩的工作，一切都像计算机中的零和<SPAN class=GramE>一</SPAN>那么完美。</P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0">选拔：每年都会举办一次的新晋的数据化人员。</P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0">数据化世界：把人的脑部意识放到一个由计算机运行的大型服务器里，只要服务器不断线，人类就从此获得永生。</P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0">自动化：未来城市当中的许多物件事件都已经进行了自动化的管理，如<SPAN lang=EN-US>3D</SPAN>打印的建筑，医疗自动化等。</P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0"><SPAN class=GramE>高武装</SPAN>警员：从不久前的城市暴乱开始，警员已被允许改造身体的各个部件，而从那时起警员就已只使用编号<SPAN lang=EN-US>ID</SPAN>来互相称呼了。现所有警员多多少少都已参与过了身体改造，更有部分警员已参与了最终机械<SPAN lang=EN-US>Cyber Alpha</SPAN>的测试，属于他们的也仅剩下了回忆和意志。</P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0">自然识别：有许多人信仰看人是属于大自然的，因此他们从不参与任何身体改造。但也不反对别人，<SPAN class=GramE>只是会尊从</SPAN>大自然规则的一个派别（人都有生老病死）</P>
+<P class=MsoNormal style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0">普通人禁止购买打印设备和设射设备：打印设备</P>
+<P class=MsoNormal><SPAN lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></SPAN></P>
+<P class=MsoNormal><SPAN lang=EN-US><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal>游戏进行：</P>
+<P class=MsoNormal>数据化世界与现实世界并行，过场（另外想法：木偶戏）的插图、实时人物，静态景和文字。</P>
+<P class=MsoNormal>数据化世界与现实世界有一定关联</P>
+<P class=MsoNormal>风格是偏手绘<SPAN lang=EN-US>PBR.</SPAN></P>
+<P class=MsoNormal>商人：</P>
+<P class=MsoNormal><SPAN lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>3D</SPAN>打印机</P>
+<P class=MsoNormal>资源点：</P>
+<P class=MsoNormal><SPAN lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp;</SPAN></SPAN></P>
+<P class=MsoNormal>确定的点：</P>
+<P class=MsoNormal><SPAN lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN></SPAN>地图<SPAN lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN>手绘<SPAN lang=EN-US>PBR</SPAN>（一定<SPAN class=GramE>要机甲</SPAN>）</P>
+<P class=MsoNormal>游戏进行（过场）<SPAN lang=EN-US><SPAN style="mso-spacerun: yes">&nbsp; </SPAN></SPAN>枪械外观</P>
+<P class=MsoNormal>概设：</P>
+<P class=MsoNormal>色块区域分明和材质特色分明，结构提前设定。</P>
+<P class=MsoNormal>数据化世界更像《盗梦空间》的世界<SPAN lang=EN-US>a</SPAN></P>
+<P class=MsoNormal>地标性场景</P>
+<P class=MsoNormal>特效可参考《<SPAN lang=EN-US>Transference</SPAN>》</P>
+<P class=MsoNormal>芯片卡接口是可以接在人身上</P>
+<P class=MsoNormal><SPAN lang=EN-US>3D</SPAN>打印购买形式</P>
+<P class=MsoNormal>开始固定有初始武器</P>
+<P class=MsoNormal>游戏过程中可更换组件，不可更换小部件</P>
+<P class=MsoNormal>组件获得的方式：商店（货币（<SPAN lang=EN-US>byte</SPAN>）<SPAN lang=EN-US style='FONT-FAMILY: "Apple Color Emoji"; mso-bidi-font-family: "Apple Color Emoji"'>↔</SPAN>怪物），抽奖（游戏老虎机）</P>
+<P class=MsoNormal>视角</P>
+<P class=MsoNormal>传送过关<SPAN lang=EN-US>←</SPAN>关卡目标</P>
+<P class=MsoNormal>主题场景<SPAN lang=EN-US>→</SPAN>破碎空间</P>
+<P class=MsoNormal>场景主<SPAN lang=EN-US>BOSS</SPAN>的种类，怪物，决定于故事板</P>
+<P class=MsoNormal>实现世界中的人对主角进行记忆读写</P>
+<P class=MsoNormal>模仿旧时代的场景布置</P>
+<P class=MsoNormal>枪对场景缺点的描述</P>
+<P class=MsoNormal>小故事决定场景主题</P>
+<P class=MsoNormal>通用小怪<SPAN lang=EN-US style='FONT-FAMILY: "Apple Color Emoji"; mso-bidi-font-family: "Apple Color Emoji"'>↔</SPAN>怪物</P>
+<P class=MsoNormal>三个怪物，爆浆，泥怪，瘦长鬼影</P></DIV>
