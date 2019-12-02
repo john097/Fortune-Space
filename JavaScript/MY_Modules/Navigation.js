@@ -46,7 +46,9 @@ function createNavigationBar() {
     var more_dropdown = new DropDown('more')
     more_dropdown.CreateCell(0, '会议记录')
     more_dropdown.CreateCell(1, '角色属性')
-    more_dropdown.CreateCell(2, '芯片具体')
+    more_dropdown.CreateCell(2, '芯片文档')
+    more_dropdown.CreateCell(3,'战斗策划文档')
+    more_dropdown.CreateCell(4,'技能文档')
 
     button_More.appendChild(more_dropdown.block)
 
@@ -101,7 +103,10 @@ function ClearAllBoard() {
 
     ClearBoard('chip_doc'+'_Block');
     ClearBoard('met_doc'+'_Block')
+    ClearBoard('fight_doc'+'_Block')
+    ClearBoard('skill_doc'+'_Block')
     ClearBoard('chrins'+'_Block')
+
     ClearBoard("StoryBoard");
 }
 
@@ -139,6 +144,8 @@ function IfNaviButtonClick(my_id, my_event) {
             IfMoreDropDownBtnClick('dropdown_cell_0', 'meeting_doc');
             IfMoreDropDownBtnClick('dropdown_cell_1', 'chr_doc');
             IfMoreDropDownBtnClick('dropdown_cell_2', 'chip_doc');
+            IfMoreDropDownBtnClick('dropdown_cell_3', 'fitht_doc');
+            IfMoreDropDownBtnClick('dropdown_cell_4', 'skill_doc');
         }
         
     }
@@ -154,6 +161,10 @@ function IfMoreDropDownBtnClick(my_id, my_event) {
             chrinspect_doc.display()
         }else if (my_event === "chip_doc") {
             chip_doc.display()
+        }else if (my_event === "skill_doc") {
+            skill_doc.display()
+        }else if (my_event === "fitht_doc") {
+            fight_doc.display()
         }
     }
 }

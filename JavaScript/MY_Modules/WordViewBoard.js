@@ -2,20 +2,24 @@
 
 //临时-世界观的文档
 var worldview_doc = new viewBoardDoc('WorldView')
-worldview_doc.creat('FortuneDatabase/worldViewBoard_doc_db.txt')
+worldview_doc.create('FortuneDatabase/worldViewBoard_doc_db.txt')
 
 //-会议文档
 var meeting_doc = new viewBoardDoc('met_doc')
-meeting_doc.creat('FortuneDatabase/meeting_01_doc_db.txt')
+meeting_doc.create('FortuneDatabase/meeting_01_doc_db.txt')
 
 //角色属性文档
 var chrinspect_doc = new viewBoardDoc('chrins')
-chrinspect_doc.creat('FortuneDatabase/chr_doc_db.txt')
+chrinspect_doc.create('FortuneDatabase/chr_doc_db.txt')
 //-芯片文档
 var chip_doc = new viewBoardDoc('chip_doc');
-chip_doc.creat('FortuneDatabase/chip_doc_db.txt')
-
-
+chip_doc.create('FortuneDatabase/chip_doc_db.txt')
+//战斗策划文档
+var fight_doc = new viewBoardDoc('fight_doc')
+fight_doc.create('FortuneDatabase/fight_doc_db.txt')
+//技能文档
+var skill_doc = new viewBoardDoc('skill_doc')
+skill_doc.create('FortuneDatabase/skill_doc_db.txt')
 
 
 //!----------------------------------------------
@@ -32,7 +36,7 @@ function viewBoardDoc(id) {
     this.block.setAttribute("class", "ViewBoardBlock")
     this.content.setAttribute("class", "ViewBoardContent")
 
-    this.creat = function (url) {
+    this.create = function (url) {
         this.url = url||null
         loadXMLDoc(this.url, this.content)
     }
