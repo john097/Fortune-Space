@@ -48,7 +48,7 @@ function createNavigationBar() {
     more_dropdown.CreateCell(1, '角色属性')
     more_dropdown.CreateCell(2, '芯片文档')
     more_dropdown.CreateCell(3,'战斗策划文档')
-    more_dropdown.CreateCell(4,'技能文档')
+    more_dropdown.CreateCell(4,'游戏分析')
 
     button_More.appendChild(more_dropdown.block)
 
