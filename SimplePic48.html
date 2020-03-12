@@ -41,7 +41,7 @@
             var d = date.getDate();
             var hours = date.getHours();
             var minutes = date.getMinutes();
-            document.getElementById("ymd").innerHTML = "提交时间：" + y + "-" + m + "-" + d + " " + minutes;
+            return "提交时间：" + y + "-" + m + "-" + d + " " + minutes
         }
 
 
@@ -199,7 +199,6 @@
             </a>
             <button onclick="capture()">生成排版图</button>
             <a id="download" href="" download="img">保存</a>
-            <p id="ymd" style="text-align: right;"></p>
         </div>
 
 
@@ -222,7 +221,7 @@
             var canvas2 = document.createElement("canvas");
             var _canvas = document.body
             var w = parseInt(window.getComputedStyle(_canvas).width);
-            var h = parseInt(window.getComputedStyle(_canvas).height)-th;
+            var h = parseInt(window.getComputedStyle(_canvas).height)+31-th;
 
             canvas2.width = w * scaleRatio;
             canvas2.height = h * scaleRatio;
@@ -231,7 +230,7 @@
 
             var context = canvas2.getContext("2d");
             context.scale(scaleRatio, scaleRatio);
-            context.translate(0, -th)
+            context.translate(0, 31-th)
 
             html2canvas(document.querySelector("body"),
                 {
@@ -247,6 +246,7 @@
                 });
         }
         function getuserinfo() {
+            gettime()
             username = document.getElementById("username").value;
             classname = document.getElementById("classname").value;
             time = gettime();
