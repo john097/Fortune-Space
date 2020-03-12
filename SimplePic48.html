@@ -1,9 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-    <meta name="viewport" content="width=device-width, minimum-scale=0.1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>图片简单拼接</title>
+    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
     <script>
 
         function handleFiles(files) {
@@ -48,6 +51,8 @@
     <style type="text/css">
         body {
             background-color: rgb(239, 239, 239);
+            margin: 0;
+            padding: 0;
         }
 
         #preview {
@@ -167,50 +172,83 @@
 </head>
 
 <body>
-    <div class="screenshot">
-        <div style="margin: auto;text-align: center;max-width: 600px;">
-            <p style="text-align: center;margin: 35px;font-size: 24px;">简单图片排版48</p>
+    <div id="ignore">
+        <div id="title" style="margin: auto;text-align: center;max-width: 600px;">
+            <p style="text-align: center;margin: 35px;font-size: 24px;display: inline;">简单图片排版48</p>
+
+            <DIV class=WordSection1 style="LAYOUT-GRID:  15.6pt none;text-align: left;">
+                <P class=MsoNormal style="TEXT-INDENT: 21pt">版本测试<SPAN lang=EN-US>1.0 </SPAN>功能上<SPAN
+                        class=GramE>传图片</SPAN>后自动按照从左到右的排版规则，排版图片有间距如要去除边距请自行调出控制台进行调制。默认缩放倍率为<SPAN
+                        lang=EN-US>1.0</SPAN>最大值为<SPAN lang=EN-US>4.0</SPAN>，每次调整增大倍率为<SPAN lang=EN-US>1.0</SPAN>。</P>
+                <P class=MsoNormal style="TEXT-INDENT: 21pt">默认背景颜色为<SPAN lang=EN-US>background-color: <SPAN
+                            class=SpellE>rgb</SPAN>(239, 239, 239)</SPAN>。</P>
+                <P class=MsoNormal>使用说明：</P>
+                <P class=MsoNormal style="TEXT-INDENT: 21pt">使用前请先输入姓名和作业号，姓名输入后自动生成当天时间，如没有请忽略。上<SPAN
+                        class=GramE>传图片后名字</SPAN>和作业号检查没有错误点击生成排版图按钮，生成完成后会加载在页面下方，点击保存按钮即可储存当前生成的高清排版图。</P>
+                <P class=MsoNormal><SPAN lang=EN-US>SimplePic48 </SPAN></P>
+                <P class=MsoNormal style="text-align: right;"><SPAN lang=EN-US>@Zfish97</SPAN></P>
+            </DIV>
+            <p>缩放倍率<input type="range" id="volume" min="1" max="4" value="1"></p>
 
             <input type="text" id="username" name="username" value="姓名" onchange="gettime()">
             <input type="text" id="classname" name="classname" value="作业号">
             <a href="javascript:;" class="file">选择文件
                 <input type="file" name="" id="" onchange="handleFiles(this.files)" multiple>
             </a>
-            <div class="copy">
-                <button οnclick="copy()">截图</button>
-                <a class="down" href="" download="downImg">下载</a>
-
-            </div>
+            <button onclick="capture()">生成排版图</button>
+            <a id="download" href="" download="img">保存</a>
             <p id="ymd" style="text-align: right;"></p>
         </div>
+
+
         <div id="preview">
 
         </div>
     </div>
-    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
     <script>
-        var pic;
-        var canvas2 = document.createElement("canvas");
-        let
-            _canvas = document.querySelector('.screenshot');
-        var w = parseInt(window.getComputedStyle(_canvas).width);
-        var h = parseInt(window.getComputedStyle(_canvas).height);
-        //将canvas画布放大若干倍，然后盛放在较小的容器内，就显得不模糊了
-        canvas2.width = w * 2;
-        canvas2.height = h * 2;
-        canvas2.style.width = w + "px";
-        canvas2.style.height = h + "px";
-        //可以按照自己的需求，对context的参数修改,translate指的是偏移量   
-        var context = canvas2.getContext("2d");
-        context.scale(2, 2);
-        html2canvas(document.querySelector('.screenshot'), { canvas: canvas2 }).then(function (canvas) {
-            pic = canvas;
-            //canvas转换成url，然后利用a标签的download属性，直接下载，绕过上传服务器再下载
-            document.querySelector(".down").setAttribute('href', canvas.toDataURL());
-        });
-        //点击的时候把图片复制到下面那个div下
-        function copy() {
-            document.querySelector(".copy").appendChild(pic);
+        function capture() {
+            var userinfo = document.createElement("p")
+            userinfo.innerHTML = getuserinfo()
+            document.getElementById("preview").appendChild(userinfo)
+            var scaleRatio = document.getElementById("volume").value
+
+
+            var t_t = document.getElementById('title')
+            var th = parseInt(window.getComputedStyle(t_t).height);
+
+            var pic;
+            var canvas2 = document.createElement("canvas");
+            var _canvas = document.body
+            var w = parseInt(window.getComputedStyle(_canvas).width);
+            var h = parseInt(window.getComputedStyle(_canvas).height)-th;
+
+            canvas2.width = w * scaleRatio;
+            canvas2.height = h * scaleRatio;
+            canvas2.style.width = w + "px";
+            canvas2.style.height = h + "px";
+
+            var context = canvas2.getContext("2d");
+            context.scale(scaleRatio, scaleRatio);
+            context.translate(0, -th)
+
+            html2canvas(document.querySelector("body"),
+                {
+                    allowTaint: true,
+                    logging: true,
+                    useCORS: true,
+                    canvas: canvas2
+                }).then(canvas => {
+                    pic = canvas;
+                    document.body.appendChild(canvas)
+                    document.getElementById("download").setAttribute("href", canvas.toDataURL("image/png", 1.0))
+                    document.getElementById("download").setAttribute("download", getuserinfo())
+                });
+        }
+        function getuserinfo() {
+            username = document.getElementById("username").value;
+            classname = document.getElementById("classname").value;
+            time = document.getElementById("ymd").innerHTML;
+            return username + '-' + classname + '-' + time;
         }
 
     </script>
