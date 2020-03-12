@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=0.1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>图片简单拼接</title>
+    <script>
+
+        function handleFiles(files) {
+            var preview = document.getElementById('preview');
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                var imageType = /^image\//;
+
+                if (!imageType.test(file.type)) {
+                    continue;
+                }
+
+                var img = document.createElement("img");
+                img.classList.add("obj");
+                img.file = file;
+                // 假设 "preview" 是将要展示图片的 div
+                preview.appendChild(img);
+
+                var reader = new FileReader();
+                reader.onload = (function (aImg) {
+                    return function (e) {
+                        aImg.src = e.target.result;
+                    };
+                })(img);
+                reader.readAsDataURL(file);
+            }
+        }
+        function gettime() {
+            var date = new Date()
+            var y = date.getFullYear();
+            var m = date.getMonth() + 1;
+            var d = date.getDate();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            document.getElementById("ymd").innerHTML = "提交时间：" + y + "-" + m + "-" + d + " " + minutes;
+        }
+
+
+
+    </script>
+
+    <style type="text/css">
+        body {
+            background-color: rgb(239, 239, 239);
+        }
+
+        #preview {
+            display: flex;
+            flex-wrap: wrap;
+            flex-grow: initial;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        img {
+            transition: 0.2s;
+            height: 120px;
+            margin: 10;
+            box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }
+
+        #username,
+        #classname {
+            width: 120px;
+            height: 30px;
+            border-radius: 5px;
+            border-width: thin;
+            transition: 0.2s;
+            background-color: white;
+            padding: 0 10px;
+        }
+
+        input[type="file"i] {
+            cursor: pointer;
+        }
+
+        button {
+            height: 30px;
+            border-radius: 5px;
+            border-width: thin;
+            transition: 0.2s;
+            border-color: white;
+            background-color: rgb(69, 122, 186);
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            padding: 0 40px;
+        }
+
+        button:hover {
+            background-color: rgb(69, 84, 186);
+        }
+
+        .file {
+            transition: 0.2s;
+            position: relative;
+            background-color: rgb(69, 122, 186);
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 30px;
+            overflow: hidden;
+            color: white;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+            font-size: 14px;
+        }
+
+        .file input {
+            position: relative;
+            opacity: 0;
+            width: 100px;
+
+        }
+
+        .file:hover {
+            background: #AADFFD;
+            background-color: rgb(69, 84, 186);
+            color: white;
+            text-decoration: none;
+        }
+
+        /*a  upload */
+        .a-upload {
+            padding: 4px 10px;
+            height: 20px;
+            line-height: 20px;
+            position: relative;
+            cursor: pointer;
+            color: #888;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1
+        }
+
+        .a-upload input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            cursor: pointer
+        }
+
+        .a-upload:hover {
+            color: #444;
+            background: #eee;
+            border-color: #ccc;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="screenshot">
+    <div style="margin: auto;text-align: center;max-width: 600px;">
+        <p style="text-align: center;margin: 35px;font-size: 24px;">简单图片排版48</p>
+
+        <input type="text" id="username" name="username" value="姓名" onchange="gettime()">
+        <input type="text" id="classname" name="classname" value="作业号">
+        <a href="javascript:;" class="file">选择文件
+            <input type="file" name="" id="" onchange="handleFiles(this.files)" multiple>
+        </a>
+        <div class="copy">
+            <button οnclick="copy()">截图</button>
+            <a class="down" href="" download="downImg">下载</a>
+
+        </div>
+
+        <p id="ymd" style="text-align: right;"></p>
+    </div>
+    </div>
+    <div id="preview"></div>
+
+    </div>
+    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script>
+        var pic;
+        var canvas2 = document.createElement("canvas");
+        let
+            _canvas = document.querySelector('.screenshot');
+        var w = parseInt(window.getComputedStyle(_canvas).width);
+        var h = parseInt(window.getComputedStyle(_canvas).height);
+        //将canvas画布放大若干倍，然后盛放在较小的容器内，就显得不模糊了
+        canvas2.width = w * 2;
+        canvas2.height = h * 2;
+        canvas2.style.width = w + "px";
+        canvas2.style.height = h + "px";
+        //可以按照自己的需求，对context的参数修改,translate指的是偏移量   
+        var context = canvas2.getContext("2d");
+        context.scale(2, 2);
+        html2canvas(document.querySelector('.screenshot'), { canvas: canvas2 }).then(function (canvas) {
+            pic = canvas;
+            //canvas转换成url，然后利用a标签的download属性，直接下载，绕过上传服务器再下载
+            document.querySelector(".down").setAttribute('href', canvas.toDataURL());
+        });
+        //点击的时候把图片复制到下面那个div下
+        function copy() {
+            document.querySelector(".copy").appendChild(pic);
+        }
+        
+    </script>
+</body>
+
+</html>
