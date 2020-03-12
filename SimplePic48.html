@@ -190,7 +190,7 @@
             </DIV>
             <p>缩放倍率<input type="range" id="volume" min="1" max="4" value="1"></p>
 
-            <input type="text" id="username" name="username" value="姓名" onchange="gettime()">
+            <input type="text" id="username" name="username" value="姓名" >
             <input type="text" id="classname" name="classname" value="作业号">
             <a href="javascript:;" class="file">选择文件
                 <input type="file" name="" id="" onchange="handleFiles(this.files)" multiple>
@@ -247,7 +247,7 @@
         function getuserinfo() {
             username = document.getElementById("username").value;
             classname = document.getElementById("classname").value;
-            time = document.getElementById("ymd").innerHTML;
+            time = gettime();
             return username + '-' + classname + '-' + time;
         }
 
